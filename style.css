@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: white;
+} 
+
+body{
+  background: #94DE8B;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background: #B19CD9;
+  width: 450px;
+  padding: 35px;
+  border-radius: 25px;
+  margin: 15px;
+}
+
+.main-header {
+  background: #F4C3D7;
+  padding: 15px;
+  border-radius: 25px;
+  text-align: center;
+  border: solid 5px #F4A8CF;
+}
+
+.result-display {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  align-items: center;
+}
+
+.player-choice-txt,
+.bot-choice-txt {
+  font-size: 85px;
+  position: relative;
+}
+
+.player-choice-txt {
+  transform: rotate(90deg) rotateY(180deg);
+}
+
+.player-choice-txt-animate {
+  animation: player-shake-result 0.5s ease alternate infinite;
+}
+
+
+.bot-choice-txt-animate {
+  animation: bot-shake-result 0.5s ease alternate infinite;
+}
+
+.bot-choice-txt {
+  transform: rotate(-90deg);
+}
+
+.versus-text {
+  font-size: 32.5px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score-board h4 {
+  font-weight: 600;
+  
+}
+
+.option-choice {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.option-wrapper {
+  transition: 0.20s;
+}
+
+.option-choice:hover .option-wrapper:not(:hover) {
+  opacity: 0.5;
+  transform: scale(0.90);
+}
+
+.choice-btn {
+  width: 100px;
+  height: 70px;
+  border-radius: 95px;
+  background: none;
+  border: solid 2.5px #F4C3D7;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.choice-btn:hover {
+  background: #F4A8CF;
+}
+
+.choice-label {
+  text-align: center;
+  margin: 8.5px;
+  font-weight: 600;
+}
+
+@keyframes player-shake-result {
+  from {
+    bottom: 5px;
+    rotate: -5deg;
+  }
+  to {
+    bottom: -5px;
+    rotate: 5deg;
+  }
+}
+
+@keyframes bot-shake-result {
+  from {
+    bottom: 5px;
+    rotate: 5deg;
+  }
+  to {
+    bottom: -5px;
+    rotate: -5deg;
+  }
+}
